@@ -1,0 +1,205 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    margin: 0;
+}
+.to-do-list {
+    text-align: left;
+}
+ul  {
+    /* margin: 30px; */
+    list-style-type: none;
+    width: 75%;
+}
+span {
+    font-size: large;
+}
+::placeholder {
+    color: gainsboro;
+}
+.filter {
+    color: #29417d;
+    border-radius: 15px;
+    width: 90px;
+    height: 20px;
+}
+.filter:hover {
+  color: white;
+  cursor: pointer;
+}
+.mode {
+    color: #29417d;
+    padding: 15px;
+    border-radius: 15px;
+    width: 100px;
+    height: 20px;
+}
+.mode:hover {
+    border: 1px solid #29417d;
+    cursor: pointer;
+}
+input {
+    text-align: center;
+    margin: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    font-size: medium;
+    width: 250px;
+    height: 40px;
+}
+input:focus {
+    outline: none;
+}
+.btn {
+    width: 80px;
+    margin: 4px;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #ffb5ca);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+    background-size: 300% 100%;
+    border: none;
+    transition: all .4s ease-in-out;
+}
+.btn:hover {
+    background-position: 100% 0;
+    cursor: pointer;
+}
+.btn-hover {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 45px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    outline: none;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.btn-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color-4 {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #ffb5ca);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+.hidden {
+    width: 50px;
+    visibility: hidden;
+}
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+  font-weight: 600;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgb(0, 115, 255) 0%, rgba(0,172,193,1) 100%);
+  color: white;
+  transition: 2s;
+}
+.inner-header {
+  min-height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.flex-row { /*Flexbox for containers*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flex-column { /*Flexbox for containers*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: #ffffff;
+}
+.waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; 
+    min-height:100px;
+    max-height:150px;
+}
+
+/* Animation */
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+    background-color: #ffffff;
+  }
+  h1 {
+    font-size: 32px;
+  }
+}
